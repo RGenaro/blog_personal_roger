@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Roger Devlog</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script defer src="script.js"></script>
+</head>
+<body class="bg-white text-gray-800">
+
+  <header class="bg-white shadow">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-indigo-600">Roger Devlog</h1>
+      <nav class="space-x-4">
+        <a href="index.html" class="text-gray-700 hover:text-indigo-600">Inicio</a>
+        <a href="proyectos.html" class="text-gray-700 hover:text-indigo-600">Proyectos</a>
+        <a href="blog.html" class="text-indigo-600 font-semibold">Blog</a>
+        <a href="contacto.html" class="text-gray-700 hover:text-indigo-600">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+ <section id="postList" class="py-12 px-6 container mx-auto">
+  <h2 class="text-3xl font-bold mb-8">Últimos Posts</h2>
+  <div class="grid md:grid-cols-2 gap-8">
+    <div class="p-6 border rounded-lg shadow hover:shadow-lg transition">
+      <h3 class="text-xl font-semibold mb-2">Cómo empecé en programación</h3>
+      <p class="text-sm text-gray-600 mb-4">Mi primer contacto con el mundo tech.</p>
+      <button onclick="verArticulo('post1')" class="text-indigo-600 hover:underline">Leer más →</button>
+    </div>
+    <div class="p-6 border rounded-lg shadow hover:shadow-lg transition">
+      <h3 class="text-xl font-semibold mb-2">El viaje musical que sigue</h3>
+      <p class="text-sm text-gray-600 mb-4">No fue casualidad, fue evolución.</p>
+      <button onclick="verArticulo('post2')" class="text-indigo-600 hover:underline">Leer más →</button>
+    </div>
+    <div class="p-6 border rounded-lg shadow hover:shadow-lg transition">
+      <h3 class="text-xl font-semibold mb-2"></h3>
+      <p class="text-sm text-gray-600 mb-4"></p>
+      <button onclick="verArticulo('post3')" class="text-indigo-600 hover:underline">Leer más →</button>
+    </div>
+  </div>
+</section>
+
+  <section id="articuloCompleto" class="hidden py-12 px-6 container mx-auto">
+    <button onclick="cerrarArticulo()" class="text-sm text-red-500 hover:underline mb-4">← Volver</button>
+    <div id="contenidoArticulo" class="bg-white p-6 border rounded-lg shadow"></div>
+  </section>
+
+  <footer class="bg-gray-100 text-center py-6 mt-10">
+    <p class="text-sm text-gray-500">© 2025 Roger Devlog</p>
+  </footer>
+
+</body>
+</html>
